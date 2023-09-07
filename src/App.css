@@ -1,0 +1,418 @@
+/* ***************************** This Page Contain all pages of product management section in Dashboard
+********************************************************************************************************/
+
+/* ******************* Dashboard Product Display Start */
+.dashboard_product_searchbar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .dashboard_product_searchbar input {
+    padding: 5px 10px;
+    border: 1px solid var(--deep-green);
+  }
+  .dashboard_product_display_table {
+    overflow: auto;
+  }
+  .product_name_tc {
+    width: 50% !important;
+  }
+  .dashboard_all_product_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .action_button button {
+    margin: 0 5px;
+  }
+  .product_price_span:nth-child(1)::after,
+  .product_price_span:nth-child(2)::after {
+    content: " / ";
+  }
+  
+  /* Modal content Design */
+  .single_product_modal_image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+  /* Dashboard Product Display end ******************* */
+  
+  /* ******************* Dashboard Create Product Start */
+  .product_submit_button {
+    font-size: 25px;
+    margin-top: 50px;
+  }
+  ::placeholder {
+    color: var(--black) !important;
+    opacity: 0.3 !important;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--black);
+  }
+  
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--black);
+  }
+  /* Dashboard Create Product end ******************* */
+  
+  /* ******************* Dashboard edit Product Start */
+  .edit_form ::placeholder {
+    color: var(--black) !important;
+    opacity: 1 !important;
+  }
+  .edit_form :-ms-input-placeholder {
+    color: var(--black) !important;
+  }
+  .edit_form ::-ms-input-placeholder {
+    color: var(--black) !important;
+  }
+  .success_msg {
+    color: var(--green);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+  /* Dashboard edit Product end ******************* */
+
+
+
+  .product_card_row {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 15px;
+    justify-content: center;
+    margin: 30px 0 !important;
+    text-align: center;
+  }
+  .product_name {
+    color: var(--white);
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .product_card_body {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    min-width: 270px;
+    max-height: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: rgba(237, 29, 36, 0.4) 0px 3px 8px;
+  }
+  .product_button {
+    width: 100%;
+    border-radius: 0;
+  }
+  .product_button:hover {
+    color: var(--black) !important;
+  }
+  
+  .product_img {
+    width: 250px;
+    height: auto;
+    min-height: 250px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .product_price {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+  }
+  .price_span::after {
+    content: " Tk/-";
+  }
+  .loading_spinner {
+    grid-column-start: span 4;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .product_card_row {
+      grid-template-columns: auto;
+      justify-content: center;
+    }
+    .product_card_body {
+      min-width: 80vw;
+    }
+    .product_img {
+      min-width: 100%;
+    }
+  }
+
+
+
+  .singleProduct_main {
+    margin: 30px auto;
+  }
+  
+  .single_product_body {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .single_product_img {
+    width: 70%;
+  }
+  .single_product_details {
+    width: 30%;
+  }
+  
+  .single_product_img img {
+    width: 500px;
+    height: auto !important;
+    min-height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .single_product_price {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .add_to_cart_button {
+    padding: 8px;
+    width: 120px;
+  }
+  
+  .add_to_cart_button:hover {
+    color: var(--black);
+  }
+  
+  .single_product_select_option {
+    padding: 10px 5px;
+    width: 100%;
+  }
+  
+  .categories_link a {
+    color: var(--red);
+  }
+  .categories_link a:hover {
+    color: var(--dark-red);
+  }
+  
+  /*  */
+  .quantity_cart_input {
+    display: flex;
+    width: 120px;
+  }
+  .quantity_cart_input input {
+    border: 0;
+    width: 60px;
+    text-align: center;
+    border-top: 1px solid var(--red);
+    border-bottom: 1px solid var(--red);
+  }
+  
+  .quantity_cart_input button {
+    background-color: #fff;
+    padding: 0 8px;
+    border: 1px solid var(--red);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .quantity_cart_input button:hover {
+    background-color: var(--red);
+    color: var(--white);
+  }
+  .quantity_cart_button {
+    display: flex;
+    gap: 30px;
+  }
+  .quantity_cart_input input::-webkit-inner-spin-button,
+  .quantity_cart_input input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .single_product_body {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .single_product_details {
+      width: 100%;
+    }
+    .single_product_img {
+      width: 100%;
+    }
+    .single_product_img img {
+      width: 100%;
+      min-height: 100%;
+    }
+  }
+  
+  .checkout_main {
+    padding: 50px 10px;
+    background-image: url("https://res.cloudinary.com/dnz6zg4on/image/upload/v1692686715/Frontend_images/Background_images/hpldnybpokkcekx0j2k4.webp");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.5);
+  }
+  .checkout_main h2 {
+    padding-bottom: 20px;
+  }
+  
+  .checkout_body {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .checkout-patterns-bottom {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(180deg);
+  }
+  .billing_form {
+    width: 100%;
+    padding: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .mandatory_note {
+    color: var(--red);
+  }
+  .mandatory_field:after {
+    content: " *";
+    color: var(--red);
+    font-size: 20px;
+  }
+  .billing_form h5,
+  .checkout_details h5 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+  }
+  .checkout_details {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 50px;
+  }
+  .table_row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .cash-On-delivery-text {
+    color: var(--red);
+    padding: 5px;
+  }
+  
+  .TandC_text {
+    text-align: justify;
+  }
+  .TandC_link {
+    color: var(--red);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .placeOrder_btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 30px;
+    border: 1px solid black;
+  }
+  
+  .checkBox_main {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkBox_input {
+    border: 1px solid black;
+  }
+  
+  .checkBox_label {
+    margin: 0 5px 0 5px !important;
+  }
+  
+  .coupon-input {
+    border-radius: 5px 0 0 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .checkout_body {
+      flex-direction: column;
+    }
+    .billing_form {
+      padding: 0 !important;
+      border: none !important;
+    }
+    .checkout_details {
+      padding: 20px;
+    }
+    .checkout_main h2 {
+      text-align: center;
+    }
+  }
+  
+  /* *********************** Success page ************* */
+  .success_main {
+    display: flex;
+    justify-content: center;
+  }
+  .success_body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+    text-align: center;
+    background-color: #d9d9d9;
+    padding: 80px;
+  }
+  .success_redirect_button {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .success_icon {
+    font-size: 40px;
+    background-color: var(--green);
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  .apply_coupon_btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .apply_coupon_btn:hover {
+    background-color: var(--green);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .success_body {
+      width: 100%;
+      padding: 30px 10px;
+    }
+    .success_redirect_button {
+      flex-direction: column;
+      width: fit-content;
+      margin: 0 auto;
+      gap: 10px;
+    }
+  }
