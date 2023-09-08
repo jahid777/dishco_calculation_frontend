@@ -239,67 +239,61 @@ const SingleFood = () => {
                   })}
                 </div>
                 {data?.stock === "Stock_In" ? (
-                  canOrder ? (
-                    <>
-                      <div className="quantity_cart_button my-3">
-                        <span className="quantity_cart_input">
-                          <button
-                            className="value-button"
-                            id="decrease"
-                            onClick={() => handleDecrease()}
-                          >
-                            -
-                          </button>
-                          <input
-                            type="number"
-                            id="number"
-                            value={quantity}
-                            readOnly
-                          />
-                          <button
-                            className="value-button"
-                            id="increase"
-                            onClick={() => handleIncrease()}
-                          >
-                            +
-                          </button>
-                        </span>
+                  <>
+                    <div className="quantity_cart_button my-3">
+                      <span className="quantity_cart_input">
                         <button
-                          // onClick={addToCart}
-                          className="MyBtn add_to_cart_button"
-                          style={{
-                            width: "600px",
-                            fontWeight: "bold",
-                          }}
-                          type="submit"
-                          onClick={selectedSize ? addToCart : null}
+                          className="value-button"
+                          id="decrease"
+                          onClick={() => handleDecrease()}
                         >
-                          <i className="bi bi-cart-plus-fill"></i> Add To Cart/
-                          set localStroage
+                          -
                         </button>
-                      </div>
-                      <div className="quantity_cart_button my-3">
+                        <input
+                          type="number"
+                          id="number"
+                          value={quantity}
+                          readOnly
+                        />
                         <button
-                          className="MyBtn add_to_cart_button"
-                          onClick={() => handleClearCart(data?._id)}
+                          className="value-button"
+                          id="increase"
+                          onClick={() => handleIncrease()}
                         >
-                          <i className="bi bi-x-circle"></i> Clear Cart
+                          +
                         </button>
+                      </span>
+                      <button
+                        // onClick={addToCart}
+                        className="MyBtn add_to_cart_button"
+                        style={{
+                          width: "600px",
+                          fontWeight: "bold",
+                        }}
+                        type="submit"
+                        onClick={selectedSize ? addToCart : null}
+                      >
+                        <i className="bi bi-cart-plus-fill"></i> Add To Cart/
+                        set localStroage
+                      </button>
+                    </div>
+                    <div className="quantity_cart_button my-3">
+                      <button
+                        className="MyBtn add_to_cart_button"
+                        onClick={() => handleClearCart(data?._id)}
+                      >
+                        <i className="bi bi-x-circle"></i> Clear Cart
+                      </button>
 
-                        <button onClick={() => handleCheckoutPageGo()}>
-                          <i className="bi bi-cart-fill"></i> go to the Checkout
-                          page
-                        </button>
-                      </div>
-                      <p>
-                        1st press the add to card then press the checkotu page
-                      </p>
-                    </>
-                  ) : (
-                    <h3 style={{ color: "red" }}>
-                      You can order food only 11.00 AM to 9.00 PM
-                    </h3>
-                  )
+                      <button onClick={() => handleCheckoutPageGo()}>
+                        <i className="bi bi-cart-fill"></i> go to the Checkout
+                        page
+                      </button>
+                    </div>
+                    <p>
+                      1st press the add to card then press the checkotu page
+                    </p>
+                  </>
                 ) : (
                   <h3 style={{ color: "red" }}>
                     Stock out , or can not be served in the online right now..!
