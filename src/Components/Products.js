@@ -11,7 +11,7 @@ const Products = () => {
     const fetchAllFood = () => {
       axios
         .get(`${process.env.REACT_APP_BACKEND_URL}/getAllProducts`)
-        .then((response) => setFood(response?.data))
+        .then((response) => setFood(response?.data?.documents))
         .catch((error) => console.log(error));
     };
     fetchAllFood();
